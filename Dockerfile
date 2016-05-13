@@ -34,6 +34,7 @@ RUN \
     getent group memcached >/dev/null || groupadd --system memcached && \
     getent passwd memcached >/dev/null || useradd --system -c 'memcached' -g memcached -d / -s /bin/bash memcached && \
     mkdir -p /run/memcached && \
+    chown -R memcached:memcached /run/memcached && \
     echo -e "${FONT_SUCCESS}[SUCCESS] Installed memcached-${X_MEMCACHED_VERSION}${FONT_SUCCESS}" && \
     /opt/local/bin/x-archlinux-remove-unnecessary-files.sh && \
 #    pacman-optimize && \
