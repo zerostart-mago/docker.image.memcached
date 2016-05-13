@@ -47,4 +47,4 @@ VOLUME ["/run/memcached"]
 
 ENTRYPOINT ["/opt/local/memcached/bin/memcached"]
 
-CMD ["-u", "memcached" "-l", "127.0.0.1", "-o", "slab_reassign,slab_automove,lru_crawler,lru_maintainer,maxconns_fast,hash_algorithm=murmur3", "-v"]
+CMD ["-u", "memcached", "-l", "127.0.0.1", "-o", "slab_reassign,slab_automove,lru_crawler,lru_maintainer,maxconns_fast,hash_algorithm=murmur3", "-v"]
